@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Modal Box Example</title>
+    <link rel="stylesheet" href="style.css.">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<button id="openModalBtn1" class="styled-button">Info</button>
+<button id="openModalBtn2" class="styled-button">Contact Us</button>
+
+<!-- Modal 1 -->
+<div id="myModal1" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" data-modal="myModal1">&times;</span>
+            <h2 class="info">Information Modal</h2>
+        </div>
+        <div class="modal-body">
+            <p>Enter your user input in the password & name field. Ensure it is typed correctly to avoid login errors!Demo picture</p>
+            <img src="./SL-100820-36440-05.jpg" alt="Sample Image">
+        </div>
+        <div class="modal-footer">
+            <button class="modal-button" onclick="closeModal('myModal1')">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="myModal2" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" data-modal="myModal2">&times;</span>
+            <h2>User Input</h2>
+        </div>
+        <div class="modal-body">
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <input type="submit" value="Submit" class="modal-button">
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-button" onclick="closeModal('myModal2')">Close</button>
+        </div>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
